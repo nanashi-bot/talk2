@@ -1,1 +1,35 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>テスト</title>
+</head>
+<body>
+
+<p>表示テスト</p>
+
+<input id="input">
+<button onclick="send()">送信</button>
+
+<div id="chat"></div>
+
+<script>
+function send() {
+  const input = document.getElementById("input");
+  const chat = document.getElementById("chat");
+
+  const user = document.createElement("p");
+  user.textContent = "あなた: " + input.value;
+  chat.appendChild(user);
+
+  const ai = document.createElement("p");
+  ai.textContent = "AI: ……そうか";
+  chat.appendChild(ai);
+
+  input.value = "";
+}
+</script>
+
+</body>
+</html>
